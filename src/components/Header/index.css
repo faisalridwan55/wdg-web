@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  min-height: 40vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #282c34;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("./BG.jpg");
+}
+
+.title-bg {
+  display: flex;
+  color: #fff;
+  font-family: 'AmsterdamFour';
+  padding: 5% 10%;
+  border-radius: 8px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(0, 0, 0, .2);
+  border: 1px solid #fff;
+}
+
+.space {
+  margin: 5% 0
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    min-height: 100vh;
+  }
+}
