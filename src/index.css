@@ -10,7 +10,7 @@ body {
 
 .title {
   font-family: "GreatVibes";
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -30,6 +30,6 @@ code {
   }
 
   .title {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
