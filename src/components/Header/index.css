@@ -14,7 +14,6 @@
 .title-bg {
   display: flex;
   color: #fff;
-  font-family: 'AmsterdamFour';
   padding: 5% 10%;
   border-radius: 8px;
   align-items: center;
@@ -25,5 +24,5 @@
 }
 
 .space {
-  margin: 5% 0
+  margin: 3% 0
 }

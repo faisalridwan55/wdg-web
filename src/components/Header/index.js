@@ -5,9 +5,9 @@ function Header() {
   return (
     <header className="header">
       <div className="title-bg">
-        <div className="title">Laras & Faisal</div>
-        <div className="space">Arosa Hotel Jakarta</div>
-        <div className="space">11.10.2020</div>
+        <div className="space title">Laras & Faisal</div>
+        <div className="space sub-title">Arosa Hotel Jakarta</div>
+        <div className="space sub-title">11.10.2020</div>
       </div>
     </header>
   );

@@ -3,6 +3,16 @@
   src: local('AmsterdamFour'), url(./assets/fonts/amsterdam-four-ttf.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'GreatVibes';
+  src: local('GreatVibes'), url(./assets/fonts/GreatVibes-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Tangerine';
+  src: local('Tangerine'), url(./assets/fonts/Tangerine-Regular.ttf) format('truetype');
+}
+
 /* For mobile phones: */
 [class*="col-"] {
   width: 100%;
