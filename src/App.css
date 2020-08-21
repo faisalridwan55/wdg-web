@@ -1,27 +1,60 @@
-@font-face {
-  font-family: 'AmsterdamFour';
-  src: local('AmsterdamFour'), url(./assets/fonts/amsterdam-four-ttf.ttf) format('truetype');
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: "GreatVibes";
 }
 
-@font-face {
-  font-family: 'GreatVibes';
-  src: local('GreatVibes'), url(./assets/fonts/GreatVibes-Regular.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Tangerine';
-  src: local('Tangerine'), url(./assets/fonts/Tangerine-Regular.ttf) format('truetype');
+.sub-title {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "Tangerine";
 }
 
 /* For mobile phones: */
+.desktop-only {
+  display: none;
+}
+
+.mobile-only {
+  display: flex;
+}
+
+[class*="col"] {
+  display: flex;
+  flex-direction: column;
+}
+
 [class*="col-"] {
   width: 100%;
 }
 
+.row {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
 
 @media only screen and (min-width: 768px) {
 
   /* For desktop: */
+  .desktop-only {
+    display: flex;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .sub-title {
+    font-size: 3.5rem;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
   .col-1 {
     width: 8.33%;
   }

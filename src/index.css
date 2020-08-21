@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'AmsterdamFour';
+  src: local('AmsterdamFour'), url(./assets/fonts/amsterdam-four-ttf.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'GreatVibes';
+  src: local('GreatVibes'), url(./assets/fonts/GreatVibes-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Tangerine';
+  src: local('Tangerine'), url(./assets/fonts/Tangerine-Regular.ttf) format('truetype');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -8,30 +23,7 @@ body {
 
 }
 
-.title {
-  font-size: 3rem;
-  font-weight: bold;
-  text-align: center;
-  font-family: "GreatVibes";
-}
-
-.sub-title {
-  font-size: 2.5rem;
-  text-align: center;
-  font-family: "Tangerine";
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-@media only screen and (min-width: 768px) {
-  .sub-title {
-    font-size: 3.5rem;
-  }
-
-  .title {
-    font-size: 4rem;
-  }
 }

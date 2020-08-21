@@ -18,6 +18,8 @@ function App() {
           <AboutUs />
         </>
       )}
+      {/* <Header />
+      <AboutUs /> */}
     </div>
   );
 }
