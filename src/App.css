@@ -13,11 +13,11 @@
 
 /* For mobile phones: */
 .desktop-only {
-  display: none;
+  display: none !important;
 }
 
 .mobile-only {
-  display: flex;
+  display: flex !important;
 }
 
 [class*="col"] {
@@ -40,11 +40,11 @@
 
   /* For desktop: */
   .desktop-only {
-    display: flex;
+    display: flex !important;
   }
 
   .mobile-only {
-    display: none;
+    display: none !important;
   }
 
   .sub-title {
