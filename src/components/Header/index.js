@@ -15,7 +15,7 @@ function Header() {
         <div className="space sub-title">Ambhara Hotel Jakarta</div>
         <div className="space sub-title">11.10.2020</div>
       </div>
-      <div className="col" style={rsvpStyle}>
+      <div className="my-col" style={rsvpStyle}>
         <div style={{ fontFamily: "Tangerine", fontSize: "2rem" }}>
           Kindly RSVP by September 25th
         </div>

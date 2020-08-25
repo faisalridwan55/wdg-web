@@ -1,7 +1,6 @@
 import React from "react";
-import "./index.css";
-import laras from "./womanDP.png";
 import faisal from "./manDP.png";
+import laras from "./womanDP.png";
 
 function AboutUs() {
   const imgStyle = {
@@ -11,27 +10,32 @@ function AboutUs() {
     borderRadius: "50%",
   };
   const itemsStyle = { fontWeight: "bold", justifyContent: "center" };
+  const containerStyle = {
+    padding: "5%",
+    color: "white",
+    backgroundColor: "black",
+  };
 
   return (
-    <div id="about-container">
+    <div style={containerStyle}>
       <div className="sub-title" style={{ fontWeight: "bold" }}>
         About Us
       </div>
 
       {/* Komponen About Us saat di mobile */}
-      <div className="mobile-only col align-items-center">
+      <div className="mobile-only my-col align-items-center">
         <div className="row" style={itemsStyle}>
           Citra Ayu Larasati (Laras)
         </div>
         <div className="row justify-content-center">
-          Putri dari Bapak Suranto & Ibu Umi Hartati
+          Daughter of Mr. Suranto & Mrs. Umi Hartati
         </div>
         <img alt="Laras" src={laras} style={imgStyle} />
         <div className="row mt-4" style={itemsStyle}>
           Muhammad Faisal Taufiqur Ridwan (Faisal)
         </div>
         <div className="row justify-content-center">
-          Putra dari Bapak Ardevi & Ibu Lina Darlina
+          Son of Mr. Ardevi & Mrs. Lina Darlina
         </div>
         <img alt="Faisal" src={faisal} style={imgStyle} />
       </div>
@@ -39,21 +43,21 @@ function AboutUs() {
       {/* Komponen About Us saat di selain mobile */}
       <div className="desktop-only">
         <div className="row">
-          <div className="col-6 align-items-center">
+          <div className="col-6 text-center">
             <div className="row" style={itemsStyle}>
               Citra Ayu Larasati (Laras)
             </div>
             <div className="row justify-content-center">
-              Putri dari Bapak Suranto & Ibu Umi Hartati
+              Daughter of Mr. Suranto & Mrs. Umi Hartati
             </div>
             <img alt="Laras" src={laras} style={imgStyle} />
           </div>
-          <div className="col-6 align-items-center">
+          <div className="col-6 text-center">
             <div className="row" style={itemsStyle}>
               Muhammad Faisal T.R (Faisal)
             </div>
             <div className="row justify-content-center">
-              Putra dari Bapak Ardevi & Ibu Lina Darlina
+              Son of Mr. Ardevi & Mrs. Lina Darlina
             </div>
             <img alt="Faisal" src={faisal} style={imgStyle} />
           </div>
@@ -65,7 +69,7 @@ function AboutUs() {
       </div>
 
       {/* Komponen Information saat di mobile */}
-      <div className="mobile-only col align-items-center">
+      <div className="mobile-only my-col align-items-center">
         {/* Venue */}
         <svg
           width="4em"
@@ -88,6 +92,13 @@ function AboutUs() {
         <div style={{ display: "block", textAlign: "center" }}>
           Jl. Iskandarsyah Raya No.1, RW.2, Melawai, Kec. Kby. Baru, Kota
           Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12160
+        </div>
+        <div
+          style={{ display: "block", textAlign: "center", fontWeight: "bold" }}
+        >
+          <a target="_blank" href="https://goo.gl/maps/QwVz9PGxGzUcNccs7">
+            Get directions
+          </a>
         </div>
 
         {/* Date */}
@@ -139,17 +150,17 @@ function AboutUs() {
           Time
         </div>
         <div className="row justify-content-center">
-          Ceremony: 14.00 - 15.30 WIB
+          Ceremony (for family): 13.00 - 15.00 WIB
         </div>
         <div className="row justify-content-center">
-          Tasyakuran: 15.30 - 17.30 WIB
+          Friend's event: 16.00 - 18.00 WIB
         </div>
       </div>
 
       {/* Komponen Information saat di selain mobile */}
-      <div className="desktop-only col">
+      <div className="desktop-only my-col">
         <div className="row">
-          <div className="col-6 offset-3 align-items-center">
+          <div className="col-6 offset-3 text-center">
             {/* Venue */}
             <svg
               width="4em"
@@ -173,10 +184,21 @@ function AboutUs() {
               Jl. Iskandarsyah Raya No.1, RW.2, Melawai, Kec. Kby. Baru, Kota
               Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12160
             </div>
+            <div
+              style={{
+                display: "block",
+                textAlign: "center",
+                fontWeight: "bold",
+              }}
+            >
+              <a target="_blank" href="https://goo.gl/maps/QwVz9PGxGzUcNccs7">
+                Get directions
+              </a>
+            </div>
           </div>
         </div>
         <div className="row">
-          <div className="col-6 align-items-center">
+          <div className="col-6 text-center">
             {/* Date */}
             <svg
               width="4em"
@@ -204,7 +226,7 @@ function AboutUs() {
               Sunday, 11th October 2020
             </div>
           </div>
-          <div className="col-6 align-items-center">
+          <div className="col-6 text-center">
             {/* Time */}
             <svg
               width="4em"
@@ -227,10 +249,10 @@ function AboutUs() {
               Time
             </div>
             <div className="row justify-content-center">
-              Ceremony: 14.00 - 15.30 WIB
+              Ceremony (for family): 13.00 - 15.00 WIB
             </div>
             <div className="row justify-content-center">
-              Tasyakuran: 15.30 - 17.30 WIB
+              Friend's event: 16.00 - 18.00 WIB
             </div>
           </div>
         </div>
