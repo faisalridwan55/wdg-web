@@ -3,7 +3,7 @@ import "./App.css";
 
 import Header from "./components/Header";
 import AboutUs from "./components/AboutUs";
-import RSVPForm from "./components/RSVPForm";
+// import RSVPForm from "./components/RSVPForm";
 import CovidModal from "./components/CovidModal";
 
 function App() {
