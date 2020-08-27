@@ -133,10 +133,10 @@ function AboutUs() {
           Time
         </div>
         <div className="row justify-content-center">
-          Ceremony (for family): 13.00 - 15.00 WIB
+          Ceremony: 01.00 - 03.00 PM (Family Event)
         </div>
         <div className="row justify-content-center">
-          Friend's event: 16.00 - 18.00 WIB
+          Tasyakuran: 03.00 - 05.00 PM (Friend Event)
         </div>
         <div className="row justify-content-center">
           <button
@@ -180,8 +180,8 @@ function AboutUs() {
         </div>
         <div className="row justify-content-center">Ambhara Hotel</div>
         <div style={{ display: "block", textAlign: "center" }}>
-          Jl. Iskandarsyah Raya No.1, RW.2, Melawai, Kec. Kby. Baru, Kota
-          Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12160
+          Jl. Iskandarsyah Raya No.1, Blok M, Kebayoran Baru, Jakarta Selatan,
+          12160
         </div>
         <div
           style={{ display: "block", textAlign: "center", fontWeight: "bold" }}
@@ -272,10 +272,10 @@ function AboutUs() {
               Time
             </div>
             <div className="row justify-content-center">
-              Ceremony (for family): 13.00 - 15.00 WIB
+              Ceremony: 01.00 - 03.00 PM (Family Event)
             </div>
             <div className="row justify-content-center">
-              Friend's event: 16.00 - 18.00 WIB
+              Tasyakuran: 03.00 - 05.00 PM (Friend Event)
             </div>
             <div className="row justify-content-center">
               <button
@@ -322,8 +322,8 @@ function AboutUs() {
             </div>
             <div className="row justify-content-center">Ambhara Hotel</div>
             <div style={{ display: "block", textAlign: "center" }}>
-              Jl. Iskandarsyah Raya No.1, RW.2, Melawai, Kec. Kby. Baru, Kota
-              Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12160
+              Jl. Iskandarsyah Raya No.1, Blok M, Kebayoran Baru, Jakarta
+              Selatan, 12160
             </div>
             <div
               style={{
