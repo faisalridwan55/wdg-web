@@ -3,6 +3,7 @@ import "./App.css";
 
 import Header from "./components/Header";
 import AboutUs from "./components/AboutUs";
+import RSVPForm from "./components/RSVPForm";
 import CovidModal from "./components/CovidModal";
 
 function App() {
@@ -16,10 +17,12 @@ function App() {
         <>
           <Header />
           <AboutUs />
+          {/* <RSVPForm /> */}
         </>
       )}
       {/* <Header />
-      <AboutUs /> */}
+      <AboutUs />
+      <RSVPForm /> */}
     </div>
   );
 }

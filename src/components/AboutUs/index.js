@@ -16,6 +16,17 @@ function AboutUs() {
     backgroundColor: "black",
   };
 
+  const openDirections = () => {
+    window.open("https://goo.gl/maps/QwVz9PGxGzUcNccs7", "_blank");
+  };
+
+  const saveCalendar = () => {
+    window.open(
+      "https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NXBvYzBsODNoZDR0azRjcHEwN21xZDlmY2cgamdqZTE5MDVyaDFnNjczZmM3MDdoa21oZzRAZw&amp;tmsrc=jgje1905rh1g673fc707hkmhg4%40group.calendar.google.com",
+      "_blank"
+    );
+  };
+
   return (
     <div style={containerStyle}>
       <div className="sub-title" style={{ fontWeight: "bold" }}>
@@ -24,42 +35,45 @@ function AboutUs() {
 
       {/* Komponen About Us saat di mobile */}
       <div className="mobile-only my-col align-items-center">
+        <img alt="Laras" src={laras} style={imgStyle} />
         <div className="row" style={itemsStyle}>
           Citra Ayu Larasati (Laras)
         </div>
-        <div className="row justify-content-center">
-          Daughter of Mr. Suranto & Mrs. Umi Hartati
+        <div
+          className="row justify-content-center"
+          style={{ fontSize: "14px" }}
+        >
+          Daughter of Mr. Suranto (Alm) & Mrs. Umi Hartati (Almh)
         </div>
-        <img alt="Laras" src={laras} style={imgStyle} />
+        <img alt="Faisal" src={faisal} style={imgStyle} />
         <div className="row mt-4" style={itemsStyle}>
           Muhammad Faisal Taufiqur Ridwan (Faisal)
         </div>
         <div className="row justify-content-center">
           Son of Mr. Ardevi & Mrs. Lina Darlina
         </div>
-        <img alt="Faisal" src={faisal} style={imgStyle} />
       </div>
 
       {/* Komponen About Us saat di selain mobile */}
       <div className="desktop-only">
         <div className="row">
           <div className="col-6 text-center">
+            <img alt="Laras" src={laras} style={imgStyle} />
             <div className="row" style={itemsStyle}>
               Citra Ayu Larasati (Laras)
             </div>
             <div className="row justify-content-center">
-              Daughter of Mr. Suranto & Mrs. Umi Hartati
+              Daughter of Mr. Suranto (Alm) & Mrs. Umi Hartati (Almh)
             </div>
-            <img alt="Laras" src={laras} style={imgStyle} />
           </div>
           <div className="col-6 text-center">
+            <img alt="Faisal" src={faisal} style={imgStyle} />
             <div className="row" style={itemsStyle}>
               Muhammad Faisal T.R (Faisal)
             </div>
             <div className="row justify-content-center">
               Son of Mr. Ardevi & Mrs. Lina Darlina
             </div>
-            <img alt="Faisal" src={faisal} style={imgStyle} />
           </div>
         </div>
       </div>
@@ -70,37 +84,6 @@ function AboutUs() {
 
       {/* Komponen Information saat di mobile */}
       <div className="mobile-only my-col align-items-center">
-        {/* Venue */}
-        <svg
-          width="4em"
-          height="4em"
-          viewBox="0 0 16 16"
-          class="bi bi-building mt-2"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694L1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"
-          />
-          <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
-        </svg>
-        <div className="row mb-2" style={itemsStyle}>
-          Venue
-        </div>
-        <div className="row justify-content-center">Ambhara Hotel</div>
-        <div style={{ display: "block", textAlign: "center" }}>
-          Jl. Iskandarsyah Raya No.1, RW.2, Melawai, Kec. Kby. Baru, Kota
-          Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12160
-        </div>
-        <div
-          style={{ display: "block", textAlign: "center", fontWeight: "bold" }}
-        >
-          <a target="_blank" href="https://goo.gl/maps/QwVz9PGxGzUcNccs7">
-            Get directions
-          </a>
-        </div>
-
         {/* Date */}
         <svg
           width="4em"
@@ -155,48 +138,88 @@ function AboutUs() {
         <div className="row justify-content-center">
           Friend's event: 16.00 - 18.00 WIB
         </div>
-      </div>
-
-      {/* Komponen Information saat di selain mobile */}
-      <div className="desktop-only my-col">
-        <div className="row">
-          <div className="col-6 offset-3 text-center">
-            {/* Venue */}
+        <div className="row justify-content-center">
+          <button
+            className="btn btn-light my-2 font-weight-bold"
+            onClick={saveCalendar}
+          >
             <svg
-              width="4em"
-              height="4em"
+              width="1em"
+              height="1em"
               viewBox="0 0 16 16"
-              class="bi bi-building mt-2"
+              class="bi bi-calendar-check-fill mr-2"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 fill-rule="evenodd"
-                d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694L1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"
+                d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM0 5h16v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5zm10.854 3.854a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"
               />
-              <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
             </svg>
-            <div className="row mb-2" style={itemsStyle}>
-              Venue
-            </div>
-            <div className="row justify-content-center">Ambhara Hotel</div>
-            <div style={{ display: "block", textAlign: "center" }}>
-              Jl. Iskandarsyah Raya No.1, RW.2, Melawai, Kec. Kby. Baru, Kota
-              Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12160
-            </div>
-            <div
-              style={{
-                display: "block",
-                textAlign: "center",
-                fontWeight: "bold",
-              }}
-            >
-              <a target="_blank" href="https://goo.gl/maps/QwVz9PGxGzUcNccs7">
-                Get directions
-              </a>
-            </div>
-          </div>
+            Add to Calendar
+          </button>
         </div>
+
+        {/* Venue */}
+        <svg
+          width="4em"
+          height="4em"
+          viewBox="0 0 16 16"
+          class="bi bi-building mt-4"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694L1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"
+          />
+          <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
+        </svg>
+        <div className="row mb-2" style={itemsStyle}>
+          Venue
+        </div>
+        <div className="row justify-content-center">Ambhara Hotel</div>
+        <div style={{ display: "block", textAlign: "center" }}>
+          Jl. Iskandarsyah Raya No.1, RW.2, Melawai, Kec. Kby. Baru, Kota
+          Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12160
+        </div>
+        <div
+          style={{ display: "block", textAlign: "center", fontWeight: "bold" }}
+        >
+          <button
+            className="btn btn-light my-2 font-weight-bold"
+            onClick={openDirections}
+          >
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-signpost-split-fill mr-1"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M7 16h2V6h5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.8 2.4A1 1 0 0 0 14 2H9v-.586a1 1 0 0 0-2 0V7H2a1 1 0 0 0-.8.4L.225 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4h5v5z" />
+            </svg>
+            Get directions
+          </button>
+        </div>
+        <div className="row justify-content-center mt-2">
+          <iframe
+            title="Denah Ambhara"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1537314838192!2d106.80153411484076!3d-6.243461595480681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f168d382400d%3A0x927a0e793300e1a4!2sAmbhara%20Hotel!5e0!3m2!1sen!2sid!4v1598512669668!5m2!1sen!2sid"
+            width="100%"
+            height="450"
+            frameborder="0"
+            style={{ border: 0 }}
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </div>
+      </div>
+
+      {/* Komponen Information saat di selain mobile */}
+      <div className="desktop-only my-col">
         <div className="row">
           <div className="col-6 text-center">
             {/* Date */}
@@ -254,7 +277,92 @@ function AboutUs() {
             <div className="row justify-content-center">
               Friend's event: 16.00 - 18.00 WIB
             </div>
+            <div className="row justify-content-center">
+              <button
+                className="btn btn-light my-2 font-weight-bold"
+                onClick={saveCalendar}
+              >
+                <svg
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  class="bi bi-calendar-check-fill mr-2"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM0 5h16v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5zm10.854 3.854a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"
+                  />
+                </svg>
+                Add to Calendar
+              </button>
+            </div>
           </div>
+        </div>
+        <div className="row">
+          <div className="col-6 offset-3 text-center">
+            {/* Venue */}
+            <svg
+              width="4em"
+              height="4em"
+              viewBox="0 0 16 16"
+              class="bi bi-building mt-2"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694L1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"
+              />
+              <path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
+            </svg>
+            <div className="row mb-2" style={itemsStyle}>
+              Venue
+            </div>
+            <div className="row justify-content-center">Ambhara Hotel</div>
+            <div style={{ display: "block", textAlign: "center" }}>
+              Jl. Iskandarsyah Raya No.1, RW.2, Melawai, Kec. Kby. Baru, Kota
+              Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12160
+            </div>
+            <div
+              style={{
+                display: "block",
+                textAlign: "center",
+                fontWeight: "bold",
+              }}
+            >
+              <button
+                className="btn btn-light my-2 font-weight-bold"
+                onClick={openDirections}
+              >
+                <svg
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  class="bi bi-signpost-split-fill mr-1"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M7 16h2V6h5a1 1 0 0 0 .8-.4l.975-1.3a.5.5 0 0 0 0-.6L14.8 2.4A1 1 0 0 0 14 2H9v-.586a1 1 0 0 0-2 0V7H2a1 1 0 0 0-.8.4L.225 8.7a.5.5 0 0 0 0 .6l.975 1.3a1 1 0 0 0 .8.4h5v5z" />
+                </svg>
+                Get directions
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="row justify-content-center mt-2">
+          <iframe
+            title="Denah Ambhara"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1537314838192!2d106.80153411484076!3d-6.243461595480681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f168d382400d%3A0x927a0e793300e1a4!2sAmbhara%20Hotel!5e0!3m2!1sen!2sid!4v1598512669668!5m2!1sen!2sid"
+            width="600"
+            height="450"
+            frameborder="0"
+            style={{ border: 0 }}
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
         </div>
       </div>
     </div>
