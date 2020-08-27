@@ -22,7 +22,7 @@ function AboutUs() {
 
   const saveCalendar = () => {
     window.open(
-      "https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=NXBvYzBsODNoZDR0azRjcHEwN21xZDlmY2cgamdqZTE5MDVyaDFnNjczZmM3MDdoa21oZzRAZw&amp;tmsrc=jgje1905rh1g673fc707hkmhg4%40group.calendar.google.com",
+      "https://calendar.google.com/event?action=TEMPLATE&tmeid=NXBvYzBsODNoZDR0azRjcHEwN21xZDlmY2cgamdqZTE5MDVyaDFnNjczZmM3MDdoa21oZzRAZw&tmsrc=jgje1905rh1g673fc707hkmhg4%40group.calendar.google.com",
       "_blank"
     );
   };
