@@ -63,11 +63,12 @@ function AboutUs() {
           <div className="row" style={itemsStyle}>
             Citra Ayu Larasati
           </div>
-          <div
-            className="row justify-content-center"
-            style={{ fontSize: "14px" }}
-          >
-            Daughter of Mr. Suranto (Alm) & Mrs. Umi Hartati (Almh)
+          <div className="row justify-content-center">
+            Daughter of Mr. Suranto (Alm)
+          </div>
+          <div className="row justify-content-center">&</div>
+          <div className="row justify-content-center">
+            Mrs. Umi Hartati (Almh)
           </div>
         </div>
         <div style={mobileSection}>
