@@ -1,0 +1,16 @@
+#RSVP-form {
+  width: 100%;
+  display: flex;
+  border-radius: 8px;
+  border-width: 7.5px;
+  border-style: double;
+  border-color: black;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+  #RSVP-form {
+    width: 50%;
+  }
+}
