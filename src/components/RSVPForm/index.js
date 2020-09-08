@@ -1,5 +1,8 @@
-import React, { useState } from "react";
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+
+import axios from "axios";
+import papa from "papaparse";
+import guestListRoute from "./Guest list - Faisal's Guest (CSV).csv";
 
 import "./index.css";
 
@@ -24,8 +27,34 @@ function RSVPForm() {
     presence: true,
   });
 
+  const [guestList, setGuestList] = useState([]);
+
+  useEffect(() => {
+    if (!Boolean(guestList.length)) getGuest(guestListRoute);
+  }, [guestList.length])
+
   const postForm = () => axios.post(process.env.REACT_APP_FORM_URL, formData);
 
+  const getGuest = source => {
+    papa.parse(source, {
+      download: true,
+      complete: result => setGuestList(result.data),
+    });
+  }
+
+  const checkNameInput = name => {
+    return guestList.find(guest => name.toLowerCase().includes(guest[0].toLowerCase())) || false;
+  }
+
+  const footNote = () => {
+    const guestDetail = checkNameInput(formData.name);
+    if (!guestDetail) {
+      return <i className="text-danger">*Please recheck your inputted name</i>
+    }
+    return <i className="text-success">{`*The invitation is valid for ${guestDetail[1]} person`}</i>
+  }
+  
+  console.log(guestList);
   return (
     <>
       <div className="sub-title pt-4 pb-2" style={{ fontWeight: "bold" }}>
@@ -34,7 +63,9 @@ function RSVPForm() {
       <div style={containerStyle}>
         <div id="RSVP-form">
           <div className="my-col my-3 mt-5 px-5">
-            <div style={formTitle}>Name:</div>
+            <div style={formTitle}>
+              Full Name:<small className="text-danger font-italic ml-2">(Required)</small>
+            </div>
             <input
               type="text"
               name="name"
@@ -44,9 +75,12 @@ function RSVPForm() {
                 setFormData({ ...formData, name: e.target.value })
               }
             />
+            <small>{footNote()}</small>
           </div>
           <div className="my-col my-3 px-5">
-            <div style={formTitle}>Phone:</div>
+            <div style={formTitle}>
+              Phone Number:<small className="text-danger font-italic ml-2">(Required)</small>
+            </div>
             <input
               type="number"
               name="phone"
@@ -58,7 +92,9 @@ function RSVPForm() {
             />
           </div>
           <div className="my-col my-3 px-5">
-            <div style={formTitle}>Guest of:</div>
+            <div style={formTitle}>
+              Guest of:
+            </div>
             <div className="row justify-content-center align-items-center">
               <div className="text-align-center mx-2">
                 <input
@@ -89,7 +125,9 @@ function RSVPForm() {
             </div>
           </div>
           <div className="my-col my-3 px-5">
-            <div style={formTitle}>Will you come?</div>
+            <div style={formTitle}>
+              Will you come?
+            </div>
             <div className="row justify-content-center align-items-center">
               <div className="text-align-center mx-2">
                 <input
@@ -121,7 +159,13 @@ function RSVPForm() {
             </div>
           </div>
           <div className="mb-5 text-center">
-            <button className="btn btn-success w-50" onClick={postForm}>Submit</button>
+            <button 
+              onClick={postForm}
+              disabled={!(!!checkNameInput(formData.name) && formData.phone.length > 7)}
+              className="btn btn-success w-50" 
+            >
+              Submit
+            </button>
           </div>
         </div>
       </div>
