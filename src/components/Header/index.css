@@ -26,3 +26,22 @@
 .space {
   margin: 3% 0
 }
+
+.rsvp-text {
+  bottom: 15px;
+  color: white;
+  margin-top: 10px;
+  position: absolute;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .rsvp-text {
+    position: relative;
+  }
+
+  .header {
+    justify-content: space-between;
+    padding: .75rem 0;
+  }
+}
