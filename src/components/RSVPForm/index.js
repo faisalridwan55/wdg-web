@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import axios from 'axios';
+
 import "./index.css";
 
 function RSVPForm() {
@@ -23,6 +25,8 @@ function RSVPForm() {
     guestOf: "Faisal",
     presence: true,
   });
+
+  const postForm = () => axios.post(process.env.REACT_APP_FORM_URL, formData);
 
   return (
     <>
@@ -88,7 +92,7 @@ function RSVPForm() {
               </div>
             </div>
           </div>
-          <div className="my-col my-3 mb-5 px-5">
+          <div className="my-col my-3 px-5">
             <div style={formTitle}>Will you come?</div>
             <div className="row justify-content-center align-items-center">
               <div className="text-align-center mx-2">
@@ -137,6 +141,9 @@ function RSVPForm() {
                 </svg>
               </div>
             </div>
+          </div>
+          <div className="mb-5 text-center">
+            <button className="btn btn-success w-50" onClick={postForm}>Submit</button>
           </div>
         </div>
       </div>

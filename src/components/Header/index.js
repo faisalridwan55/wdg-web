@@ -2,12 +2,6 @@ import React from "react";
 import "./index.css";
 
 function Header() {
-  const rsvpStyle = {
-    bottom: 10,
-    color: "white",
-    position: "absolute",
-    alignItems: "center",
-  };
   return (
     <header className="header">
       <div className="title-bg">
@@ -15,7 +9,7 @@ function Header() {
         <div className="space sub-title">Ambhara Hotel Jakarta</div>
         <div className="space sub-title">11.10.2020</div>
       </div>
-      <div className="my-col" style={rsvpStyle}>
+      <div className="my-col rsvp-text">
         <div style={{ fontFamily: "Tangerine", fontSize: "2rem" }}>
           Kindly RSVP by September 25th
         </div>
