@@ -11,6 +11,47 @@
   font-family: "Tangerine";
 }
 
+/* Modal */
+.modal-window {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  transition: all 0.3s;
+  justify-content: center;
+  background-color: black;
+}
+
+.modal-container {
+  padding: 0% 3%;
+  max-width: 90%;
+  min-width: 70%;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.modal-header {
+  display: flex;
+  padding: 3% 0%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header-title {
+  font-weight: bold;
+  text-align: center;
+  color: rgba(0, 0, 0, .85);
+}
+
+.modal-button {
+  padding: 0 8px
+}
+
 /* For mobile phones: */
 .desktop-only {
   display: none !important;
@@ -101,5 +142,14 @@
 
   .col-12 {
     width: 100%;
+  }
+
+  /* modal */
+  .modal-header-title {
+    font-size: 1.5rem;
+  }
+
+  .modal-button {
+    padding: 6px 12px
   }
 }

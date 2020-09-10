@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from "react";
 
 import axios from "axios";
+import moment from "moment";
 import papa from "papaparse";
 import guestListRoute from "./Guest list - Faisal's Guest (CSV).csv";
 
+import NotificationModal from "./NotificationModal";
+
 import "./index.css";
+
+const INITIAL_FORM_DATA = {
+  name: "",
+  phone: "",
+  guestOf: "Faisal",
+  presence: true,
+}
 
 function RSVPForm() {
   const containerStyle = {
@@ -22,20 +32,23 @@ function RSVPForm() {
 
   const inputStyle = { borderRadius: "8px", padding: "4px 8px" };
 
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    guestOf: "Faisal",
-    presence: true,
-  });
+  const [formData, setFormData] = useState(INITIAL_FORM_DATA);
 
   const [guestList, setGuestList] = useState([]);
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     if (!Boolean(guestList.length)) getGuest(guestListRoute);
   }, [guestList.length])
 
-  const postForm = () => axios.post(process.env.REACT_APP_FORM_URL, formData);
+  const postForm = () => 
+    axios.post(process.env.REACT_APP_FORM_URL, {...formData, registrationDate: moment().format('LLL')})
+      .then(() => {
+        setIsModalOpen(true);
+        setFormData(INITIAL_FORM_DATA);
+      })
+      .catch(() => alert("Terjadi error, silahkan hubungi Faisal atau Laras"));
 
   const getGuest = source => {
     papa.parse(source, {
@@ -57,8 +70,10 @@ function RSVPForm() {
   }
   
   console.log(guestList);
+
   return (
     <>
+      {isModalOpen && <NotificationModal setIsOpen={setIsModalOpen} />}
       <div className="sub-title pt-4 pb-2" style={{ fontWeight: "bold" }}>
         RSVP Form
       </div>

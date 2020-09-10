@@ -1,7 +1,8 @@
-import React from "react";
-import "./index.css";
+import React, { useState } from "react";
 
 function CovidModal({ setIsFirstOpen }) {
+  const [isReaded, setIsReaded] = useState(false);
+
   return (
     <>
       <div className="modal-window">
@@ -12,17 +13,18 @@ function CovidModal({ setIsFirstOpen }) {
             </div>
             <button
               type="button"
-              id="modal-button"
-              className="btn btn-danger"
+              className="btn btn-danger modal-button"
               onClick={() => setIsFirstOpen(false)}
             >
               X
             </button>
           </div>
-          <div class="modal-body">
+          <div className="modal-body">
             <p>
               Acara ini diselenggarakan dengan protokol kesehatan yang wajib
-              dipatuhi demi mencegah penularan virus Covid-19.
+              dipatuhi demi mencegah penularan virus Covid-19. Venue acara memiliki kapasitas menampung 
+              <i>standing party</i> hingga dengan <b>800 tamu, demi keamanan dan kenyamanan bersama kami menggunakan
+              venue hanya untuk +-75 tamu per sesi dengan format acara <i>round table</i></b>
             </p>
             <p>
               Tanpa mengurangi rasa hormat, para tamu undangan yang bersedia
@@ -33,8 +35,7 @@ function CovidModal({ setIsFirstOpen }) {
                 Menggunakan masker wajah atau <i>transparent face shield</i>.
               </li>
               <li>
-                Membawa hand sanitizer (untuk meminimalisir antrian cuci
-                tangan).
+                Membawa hand sanitizer (hand sanitizer juga disediakan di tempat).
               </li>
               <li>
                 Bersedia antre untuk pengecekan suhu tubuh sebelum memasuki
@@ -49,12 +50,17 @@ function CovidModal({ setIsFirstOpen }) {
                 selama acara berlangsung.
               </li>
             </ol>
+            <div className="row align-items-center">
+            <input type="checkbox" name="readed" id="readed" onClick={() => setIsReaded(!isReaded)} /> 
+            <b className="ml-1">Klik tombol jika sudah membaca</b>
+            </div>
           </div>
           <div className="modal-footer">
             <button
               type="button"
-              class="btn btn-primary"
+              disabled={!isReaded}
               style={{ width: "100%" }}
+              className="btn btn-primary"
               onClick={() => setIsFirstOpen(false)}
             >
               OK
